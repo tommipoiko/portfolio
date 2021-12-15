@@ -1,0 +1,18 @@
+Miinaharava-pelin käyttö-ohjeet:
+Pelissä esiintyvää miinakenttää ei voi käsitellä, ennen kuin pelin on itsessään aloittanut painamalla Start/Reset-nappia.
+Tällöin pelikello käynnistyy laudan yläpuolella ja miinakenttää pääsee tutkimaan. Defaultisti pelissä kentän ruutua klikkaamalla
+avataan ruutu, mutta oikeaa hiirenpainiketta painamalla vaihdetaan moodia ruudun avaamisesta lipun asettamiseen. Tämänhetkinen
+moodi on näkyvissä Start/Reset-napin yläpuolella tekstikentässä.
+Pelin hävittyään (tai älykkään ihmisen sen voitettuaan) miinakentän alapuolella olevaan tekstikenttään päivittyy lopputulos.
+Mikäli pelin nykyinen kenttä ei miellytä, on sitä mahdollista lähteä laajentamaan painamalla Options-nappia ja asettamalla
+haluamansa pelilaudan sivun koon ylempään kenttään. Tarvittaessa siemenluvun voi myös syöttää alempaan ruutuun.
+Pelin lopettaminen onnistuu Quit-painiketta painamalla.
+
+Pelin lisäominaisuudet:
+1.   Ruudun avattuaan ja sieltä löytyessä pommi, ruutuun tulostetaan kuva pommista, eikä tähti.
+     Myös lippua asettaessa ruutuun tulostetaan lippu, eikä kirjainta P.
+3/4? Pelissä ei ole painonappia, jolla muutetaan toimintamoodia, mutta oikeaa hiirenpainiketta
+     painamalla vaihdetaan moodia lipun asettamisen ja ruudun avaamisen välillä. Kuitenkaan nap-
+     pia en osannut painaa oikealla hiirenpainikkeella suoraan.
+6.   Peliruudukon kokoa voi säätää käyttöliittymän kautta ongelmitta minimi- ja maksimikoon vä-
+     lillä.
