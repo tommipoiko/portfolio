@@ -1,9 +1,4 @@
 """
-COMP.CS.100 Ohjelmointi 1 / Programming 1
-Tommi Poikolainen
-050093232
-tommi.poikolainen@tuni.fi
-
 Ohjelma vastaa laivanupotuspeliä kaikessa kompleksisuudessaan.
 """
 
