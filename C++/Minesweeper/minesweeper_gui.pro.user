@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 6.0.0, 2021-12-15T11:44:45. -->
+<!-- Written by QtCreator 6.0.1, 2021-12-22T11:39:36. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -238,14 +238,14 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/frtopo/main/student/13/minesweeper_gui/minesweeper_gui.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/frtopo/main/student/13/minesweeper_gui/minesweeper_gui.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">minesweeper_gui2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/tommipoiko/Desktop/Stuff/Personal/Programming/portfolio/C++/Minesweeper/minesweeper_gui.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/tommipoiko/Desktop/Stuff/Personal/Programming/portfolio/C++/Minesweeper/minesweeper_gui.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="bool" key="RunConfiguration.UseTerminal">false</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/frtopo/main/student/13/build-minesweeper_gui-Qt_6_2_2_for_macOS-Debug/minesweeper_gui.app/Contents/MacOS</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
