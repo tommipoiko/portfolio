@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file alias="bomb.png">bomb.png</file>
-        <file alias="flag.png">flag.png</file>
-    </qresource>
-</RCC>
