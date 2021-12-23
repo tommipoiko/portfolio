@@ -1,16 +1,23 @@
 """
-Ohjelma vastaa laivanupotuspeliä kaikessa kompleksisuudessaan.
+This program is a simple version of the traditional game
+battleship. The ship coordinates are entered via a csv-
+file at the start of the program. After which the game asks
+you to enter coordinates in the form of XY. To quit playing,
+type q or Q as the command.
 """
 
 
 class Ship:
     """
-    Luokka, jolla kuvataan laivoja.
+    This class represents the ships in the game.
     """
     def __init__(self, row):
         """
-        :param row: Kuvaa kaiken tiedon tekstitiedoston
-        riviltä. Tästä jalostetaan olioon tämän attribuutteja.
+        :param row: Parameter is equal to a row of information
+        from the csv-file. This row is then split accordingly
+        into the name of the ship, the symbol for the ship,
+        coordinates of the ship and then these coordinates are
+        set to have a value representing the status: not hit.
         """
         items = row.split(";")
         items[-1] = items[-1].strip()
@@ -25,19 +32,21 @@ class Ship:
 
     def did_it_hit(self, shot):
         """
-        :param shot: Muuttuja kuvaa ammunnan koordinaatteja.
-        Tätä käytetään mahdollisen osuman tarkistamiseen.
-        :return: Metodi palauttaa osuman laadusta riippuen eri
-        arvoja: Hutiosuman kohdalla arvon 1, (ensimmäisen)
-        osuman kohdalla arvon 2 ja toistuvissa ammunnoissa
-        arvon 3.
+        :param shot: Parameter is equal to the shot coordinates.
+        These coordinates are then used to check the hit status.
+        :return: The method returns different values depending
+        on the status of the shot: In the case of a miss it
+        returns 1, in the case of a hit it changes the hit-status
+        -attribute to 1 to represent that it is hit and returns the
+        value 2. If the same spot is shot again regardless of it
+        being hit, the method returns 3.
         """
         if shot not in self.__coordinates:
             return 1
 
         elif shot in self.__coordinates:
             if self.__is_it_hit[shot] == 0:
-                self.__is_it_hit[shot] = 2
+                self.__is_it_hit[shot] = 1
                 return 2
             else:
                 return 3
@@ -47,16 +56,17 @@ class Ship:
 
     def were_they_all_hit(self, shot):
         """
-        :param shot: Muuttuja kuvaa ammunnan koordinaatteja.
-        Tämä on käytössä metodissa laivan upotuksen tarkistamiseen.
-        :return: Mikäli laivan jokainen koordinaatti on pommitettuna,
-        metodi palauttaa arvon 4 ja muussa tapauksessa ammunnat
-        jatkuvan normaaliin tahtiin ja palautetaan arvo 2.
+        :param shot: Parameter is equal to the shot coordinates.
+        These coordinates are then used to check if the ship has been
+        sunk.
+        :return: If each coordinate of the ship is hit, the method re-
+        turns 4 and if not all coordinates are hit, the method returns
+        the value 2.
         """
         count = 0
         if shot in self.__coordinates:
             for coordinate in self.__coordinates:
-                if self.__is_it_hit[coordinate] == 2:
+                if self.__is_it_hit[coordinate] == 1:
                     count += 1
 
             if count == len(self.__is_it_hit):
@@ -67,9 +77,9 @@ class Ship:
 
     def get_coordinates(self, shot):
         """
-        :param shot: Muuttuja kuvaa ammunnan koordinaatteja.
-        :return: Metodilla muodostetaan lista osutun laivan
-        muistakin koordinaateista. Tämä palautetaan.
+        :param shot: Parameter is equal to the shot coordinates.
+        :return: The method forms a list of the sunk ships
+        coordinates. This is then returned.
         """
         list_of_coordinates = []
         if shot in self.__coordinates:
@@ -80,9 +90,9 @@ class Ship:
 
     def check_for_win(self, coordinates):
         """
-        :param coordinates: Kuvaa tyhjää listaa, johon täytetään
-        kaikkien laivojen koordinaatit.
-        :return: Palauttaa kyseisen listan.
+        :param coordinates: Parameter is an empty list that is
+        then filled with all the ship coordinates.
+        :return: The formed list.
         """
         for coord in self.__coordinates:
             coordinates.append(coord)
@@ -91,23 +101,24 @@ class Ship:
 
     def get_fletter(self):
         """
-        :return: Palauttaa laivan nimen ensimmäisen kirjaimen.
+        :return: Returns the first letter/the symbol of the ship.
         """
         return self.__fletter
 
     def get_name(self):
         """
-        :return: Palauttaa laivan nimen.
+        :return: Returns the name of the ship.
         """
         return self.__name
 
 
 def read_file():
     """
-    :return: Onnistuneen tiedoston lukemisen jälkeen funktio
-    palauttaa listan laiva-olioista ja sovelluksen jatkamista
-    kuvaavan arvon. Tiedoston lukemisessa esiintyessä virhe,
-    palautetaankin sovelluksen lopettamista kuvaava arvo.
+    :return: After a successful reading of the csv-file the
+    function returns a list of ship-objects and a value to
+    tell the program to keep running. If there is an issue
+    while reading the file, the function returns a value to
+    tell the program to stop.
     """
     filename = input("Enter file name: ")
     try:
@@ -139,10 +150,12 @@ def read_file():
 
 def range_of_coordinates(row):
     """
-    :param row: Luettavan tiedoston rivi, jonka komponentteja
-    tarkastellaan sopivien koordinaattien löytämiseksi.
-    :return: Palauttaa virhetilanteessa arvon True, joka kuvaa
-    "emo"-ohjelmassa sovelluksen lopettamisen tarvetta.
+    :param row: A row in the file to be read. This is then
+    dissected in to coordinates that are checked to see if they
+    are valid.
+    :return: If the coordinates are not proper the function
+    returns the value True, which tells the calling function to
+    quit running.
     """
     items = row.split(";")
     items[-1] = items[-1].strip()
@@ -159,14 +172,12 @@ def range_of_coordinates(row):
 
 def are_there_similarities(row, list_of_coordinates):
     """
-    :param row: Luettavan tiedoston rivi, jonka komponentteja
-    tarkastellaan päällekkäisten koordinaattien löytymiseksi.
-    :param list_of_coordinates: Tyhjä lista, mihin täytetään
-    laiva-olioiden koordinaatteja, mikäli sellaista ei vielä
-    listasta löydy.
-    :return: Palauttaa päällekkäisyyden tapauksessa sovelluksen
-    lopettamista kuvaavan True-arvon ja muulloin sovelluksen
-    jatkamista kuvaavan False-arvon.
+    :param row: A row of the read csv-file. The rows components
+    are used to check for overlapping coordinates.
+    :param list_of_coordinates: An empty list into which ship
+    coordinates are added, if they do not already exist in it.
+    :return: In the case of some overlapping the function returns
+    the value True and in other cases the value False.
     """
     items = row.split(";")
     items[-1] = items[-1].strip()
@@ -181,8 +192,8 @@ def are_there_similarities(row, list_of_coordinates):
 
 def create_board():
     """
-    :return: Palauttaa luodun 10x10-pelilaudan, joka esiintyy
-    muodossa sanakirja sanakirjassa.
+    :return: Returns the created 10x10-game-board. The board
+    exists in the form of a x-dict in a y-dict.
     """
     board = dict()
     board["A"] = dict()
@@ -220,8 +231,8 @@ def create_board():
 
 def print_board(board):
     """
-    :param board: Pelilauta nykytilassa, jota käytetään
-    tilanteen esittämiseen tulostuksen muodossa.
+    :param board: Parameter is the board in its current state.
+    It is then used to print the components of the board.
     """
     print("")
     print("  A B C D E F G H I J")
@@ -236,13 +247,13 @@ def print_board(board):
 
 def hit(list_of_ships, shot, board):
     """
-    :param list_of_ships: Lista laiva-olioista.
-    :param shot: Ammunnan kohdekoordinaatit.
-    :param board: Pelilauta, johon kirjataan osumien laadut.
-    :return: Palauttaa pääohjelmaan pelilautaa sen
-    uusintakäsittelyä varten ja onnistuneissa sekvensseissä
-    pelin jatkamista kuvaavaa arvoa 1 ja päättymistilanteessa
-    pelin lopettamista kuvaavan arvon 0.
+    :param list_of_ships: A list of the ship-objects.
+    :param shot: The coordinates of the shot.
+    :param board: The game-board into which the result of the
+    shot is then entered.
+    :return: Returns the game-board back to the main loop and in
+    the case of continuation the value 1 and when the game should
+    end the return value is 0.
     """
     X = str(shot[0].upper())
     Y = int(shot[1])
@@ -278,12 +289,12 @@ def hit(list_of_ships, shot, board):
 
 def won_the_game(list_of_ships, board):
     """
-    :param list_of_ships: Lista pelin laiva-olioista.
-    :param board: Pelilauta sen nykyisessä tilassaan.
-    :return: Funktion löytäessä tilanteen, jossa jokainen
-    laiva on upotettu, se palauttaa voittamista kuvaavan
-    True-arvon ja muutoin pelin jatkamista kuvaavan False-
-    arvon.
+    :param list_of_ships: A list of the ship-objects.
+    :param board: The game-board into which the result of the
+    shot is then entered.
+    :return: When the function finds the case in which the game
+    is won, it returns the value True and in the case of continuation
+    it returns the value False.
     """
     coordinates = []
     for ship in list_of_ships:
@@ -307,12 +318,13 @@ def won_the_game(list_of_ships, board):
 
 def show_fletter(list_of_ships, shot, board):
     """
-    :param list_of_ships: Lista olemassaolevista laiva-olioista.
-    :param shot: Osuman koordinaatit.
-    :param board: Pelilauta sen nykyisessä tilassaan.
-    :return: Mikäli funktio huomaa yhden laivan jokaiseen
-    koordinaattiin osuttaneen, funktio kirjoittaa lautaan tämän
-    koordinaatteihin tämän laivan tunnuksen.
+    :param list_of_ships: A list of the ship-objects.
+    :param shot: The coordinates of the shot.
+    :param board: The game-board into which the result of the
+    shot is then entered.
+    :return: if the function detects that all of a ships coordinates
+    are hit then instead of showing X on teh board, the ships coordinates
+    are filled with the ships symbol.
     """
     for ship in list_of_ships:
         if ship.get_coordinates(shot) is not None:
@@ -336,10 +348,12 @@ def show_fletter(list_of_ships, shot, board):
 
 def command(list_of_ships, board):
     """
-    :param list_of_ships: Lista laiva-olioista.
-    :param board: Pelilauta sen nykyisessä tilassaan.
-    :return: Palauttaa, riippuen tilanteesta, pelin jatkamista
-    kuvaavan arvon 1 tai pelin päättämistä kuvaavan arvon 0.
+    :param list_of_ships: A list of the ship-objects.
+    :param board: The game-board into which the result of the
+    shot is then entered.
+    :return: Returns, depending on the situation, a value rep-
+    resenting the continuation, which is 1 or a value telling the
+    game to stop, which is 0.
     """
     print("")
     list_of_X = ["a", "A", "b", "B", "c", "C", "d", "D", "e", "E",
