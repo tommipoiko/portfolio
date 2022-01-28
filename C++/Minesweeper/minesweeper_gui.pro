@@ -10,24 +10,15 @@ CONFIG += c++11
 
 SOURCES += \
     gameboard.cpp \
-    gameboard.cpp \
-    main.cpp \
     main.cpp \
     mainwindow.cpp \
-    mainwindow.cpp \
     optionswindow.cpp \
-    optionswindow.cpp \
-    square.cpp \
     square.cpp
 
 HEADERS += \
     gameboard.hh \
-    gameboard.hh \
-    mainwindow.hh \
     mainwindow.hh \
     optionswindow.hh \
-    optionswindow.hh \
-    square.hh \
     square.hh
 
 FORMS += \
@@ -39,8 +30,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    instructions.txt \
-    minesweeper_gui.pro.user
+    instructions.txt
 
 RESOURCES += \
     Resources/mainwindow.qrc

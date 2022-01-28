@@ -53,32 +53,21 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Minesweeper/gameboard.cpp \
-		../Minesweeper/gameboard.cpp \
-		../Minesweeper/main.cpp \
 		../Minesweeper/main.cpp \
 		../Minesweeper/mainwindow.cpp \
-		../Minesweeper/mainwindow.cpp \
 		../Minesweeper/optionswindow.cpp \
-		../Minesweeper/optionswindow.cpp \
-		../Minesweeper/square.cpp \
 		../Minesweeper/square.cpp qrc_mainwindow.cpp \
 		moc_mainwindow.cpp \
 		moc_optionswindow.cpp
 OBJECTS       = gameboard.o \
-		gameboard.o \
-		main.o \
 		main.o \
 		mainwindow.o \
-		mainwindow.o \
 		optionswindow.o \
-		optionswindow.o \
-		square.o \
 		square.o \
 		qrc_mainwindow.o \
 		moc_mainwindow.o \
 		moc_optionswindow.o
 DIST          = ../Minesweeper/instructions.txt \
-		../Minesweeper/minesweeper_gui.pro.user \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/spec_pre.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/device_config.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/common/unix.conf \
@@ -190,7 +179,6 @@ DIST          = ../Minesweeper/instructions.txt \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/qt_config.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/macx-clang/qmake.conf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/spec_post.prf \
-		../Minesweeper/.qmake.stash \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/exclusive_builds.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/mac/sdk.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/toolchain.prf \
@@ -220,21 +208,12 @@ DIST          = ../Minesweeper/instructions.txt \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/yacc.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/lex.prf \
 		../Minesweeper/minesweeper_gui.pro ../Minesweeper/gameboard.hh \
-		../Minesweeper/gameboard.hh \
-		../Minesweeper/mainwindow.hh \
 		../Minesweeper/mainwindow.hh \
 		../Minesweeper/optionswindow.hh \
-		../Minesweeper/optionswindow.hh \
-		../Minesweeper/square.hh \
 		../Minesweeper/square.hh ../Minesweeper/gameboard.cpp \
-		../Minesweeper/gameboard.cpp \
-		../Minesweeper/main.cpp \
 		../Minesweeper/main.cpp \
 		../Minesweeper/mainwindow.cpp \
-		../Minesweeper/mainwindow.cpp \
 		../Minesweeper/optionswindow.cpp \
-		../Minesweeper/optionswindow.cpp \
-		../Minesweeper/square.cpp \
 		../Minesweeper/square.cpp
 QMAKE_TARGET  = minesweeper_gui
 DESTDIR       = 
@@ -244,7 +223,7 @@ TARGET        = minesweeper_gui.app/Contents/MacOS/minesweeper_gui
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 12.1
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = /Users/tommipoiko/Desktop/Stuff/Personal/Programming/portfolio/C++/build-minesweeper_gui-Qt_6_2_2_for_macOS-Debug/.qmake.stash
+EXPORT__QMAKE_STASH_ = 
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = arm64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
@@ -371,7 +350,6 @@ Makefile: ../Minesweeper/minesweeper_gui.pro /Users/tommipoiko/Desktop/Stuff/COM
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/qt_config.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/macx-clang/qmake.conf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/exclusive_builds.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/mac/sdk.prf \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/toolchain.prf \
@@ -517,7 +495,6 @@ Makefile: ../Minesweeper/minesweeper_gui.pro /Users/tommipoiko/Desktop/Stuff/COM
 /Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/qt_config.prf:
 /Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/macx-clang/qmake.conf:
 /Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/exclusive_builds.prf:
 /Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/mac/sdk.prf:
 /Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/features/toolchain.prf:
@@ -581,8 +558,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../Minesweeper/Resources/mainwindow.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../Minesweeper/gameboard.hh ../Minesweeper/gameboard.hh ../Minesweeper/mainwindow.hh ../Minesweeper/mainwindow.hh ../Minesweeper/optionswindow.hh ../Minesweeper/optionswindow.hh ../Minesweeper/square.hh ../Minesweeper/square.hh $(DISTDIR)/
-	$(COPY_FILE) --parents ../Minesweeper/gameboard.cpp ../Minesweeper/gameboard.cpp ../Minesweeper/main.cpp ../Minesweeper/main.cpp ../Minesweeper/mainwindow.cpp ../Minesweeper/mainwindow.cpp ../Minesweeper/optionswindow.cpp ../Minesweeper/optionswindow.cpp ../Minesweeper/square.cpp ../Minesweeper/square.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Minesweeper/gameboard.hh ../Minesweeper/mainwindow.hh ../Minesweeper/optionswindow.hh ../Minesweeper/square.hh $(DISTDIR)/
+	$(COPY_FILE) --parents ../Minesweeper/gameboard.cpp ../Minesweeper/main.cpp ../Minesweeper/mainwindow.cpp ../Minesweeper/optionswindow.cpp ../Minesweeper/square.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Minesweeper/mainwindow.ui $(DISTDIR)/
 
 
@@ -593,7 +570,6 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r minesweeper_gui.app
-	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -619,9 +595,9 @@ qrc_mainwindow.cpp: ../Minesweeper/Resources/mainwindow.qrc \
 		../Minesweeper/Resources/bomb.png
 	/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/libexec/rcc -name mainwindow ../Minesweeper/Resources/mainwindow.qrc -o qrc_mainwindow.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp moc_mainwindow.cpp moc_optionswindow.cpp moc_optionswindow.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_optionswindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp moc_mainwindow.cpp moc_optionswindow.cpp moc_optionswindow.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_optionswindow.cpp
 moc_mainwindow.cpp: ../Minesweeper/mainwindow.hh \
 		../Minesweeper/square.hh \
 		../Minesweeper/gameboard.hh \
@@ -646,45 +622,6 @@ moc_mainwindow.cpp: ../Minesweeper/mainwindow.hh \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers/qtimer.h \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/libexec/moc
 	/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=13 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/macx-clang -I/Users/tommipoiko/Desktop/Stuff/Personal/Programming/portfolio/C++/Minesweeper -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib ../Minesweeper/mainwindow.hh -o moc_mainwindow.cpp
-
-moc_mainwindow.cpp: ../Minesweeper/mainwindow.hh \
-		../Minesweeper/square.hh \
-		../Minesweeper/gameboard.hh \
-		../Minesweeper/optionswindow.hh \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QSpinBox \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLineEdit \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QTextBrowser \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qtextbrowser.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/QMouseEvent \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/qevent.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers/QTimer \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers/qtimer.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/libexec/moc
-	/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=13 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/macx-clang -I/Users/tommipoiko/Desktop/Stuff/Personal/Programming/portfolio/C++/Minesweeper -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib ../Minesweeper/mainwindow.hh -o moc_mainwindow.cpp
-
-moc_optionswindow.cpp: ../Minesweeper/optionswindow.hh \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QSpinBox \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLineEdit \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/libexec/moc
-	/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=13 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/mkspecs/macx-clang -I/Users/tommipoiko/Desktop/Stuff/Personal/Programming/portfolio/C++/Minesweeper -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers -I/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib ../Minesweeper/optionswindow.hh -o moc_optionswindow.cpp
 
 moc_optionswindow.cpp: ../Minesweeper/optionswindow.hh \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -727,36 +664,6 @@ gameboard.o: ../Minesweeper/gameboard.cpp ../Minesweeper/gameboard.hh \
 		../Minesweeper/square.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameboard.o ../Minesweeper/gameboard.cpp
 
-gameboard.o: ../Minesweeper/gameboard.cpp ../Minesweeper/gameboard.hh \
-		../Minesweeper/square.hh
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameboard.o ../Minesweeper/gameboard.cpp
-
-main.o: ../Minesweeper/main.cpp ../Minesweeper/mainwindow.hh \
-		../Minesweeper/square.hh \
-		../Minesweeper/gameboard.hh \
-		../Minesweeper/optionswindow.hh \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QSpinBox \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLineEdit \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QTextBrowser \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qtextbrowser.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/QMouseEvent \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/qevent.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers/QTimer \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers/qtimer.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QApplication \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qapplication.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Minesweeper/main.cpp
-
 main.o: ../Minesweeper/main.cpp ../Minesweeper/mainwindow.hh \
 		../Minesweeper/square.hh \
 		../Minesweeper/gameboard.hh \
@@ -808,31 +715,6 @@ mainwindow.o: ../Minesweeper/mainwindow.cpp ../Minesweeper/mainwindow.hh \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Minesweeper/mainwindow.cpp
 
-mainwindow.o: ../Minesweeper/mainwindow.cpp ../Minesweeper/mainwindow.hh \
-		../Minesweeper/square.hh \
-		../Minesweeper/gameboard.hh \
-		../Minesweeper/optionswindow.hh \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QSpinBox \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLineEdit \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QTextBrowser \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qtextbrowser.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/QMouseEvent \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/qevent.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers/QTimer \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtCore.framework/Headers/qtimer.h \
-		ui_mainwindow.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Minesweeper/mainwindow.cpp
-
 optionswindow.o: ../Minesweeper/optionswindow.cpp ../Minesweeper/optionswindow.hh \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
@@ -849,27 +731,6 @@ optionswindow.o: ../Minesweeper/optionswindow.cpp ../Minesweeper/optionswindow.h
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/QScreen \
 		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/qscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o optionswindow.o ../Minesweeper/optionswindow.cpp
-
-optionswindow.o: ../Minesweeper/optionswindow.cpp ../Minesweeper/optionswindow.hh \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QSpinBox \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLineEdit \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/QApplication \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtWidgets.framework/Headers/qapplication.h \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/QScreen \
-		/Users/tommipoiko/Desktop/Stuff/COMP/COMP2/Qt/6.2.2/macos/lib/QtGui.framework/Headers/qscreen.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o optionswindow.o ../Minesweeper/optionswindow.cpp
-
-square.o: ../Minesweeper/square.cpp ../Minesweeper/square.hh \
-		../Minesweeper/gameboard.hh
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o square.o ../Minesweeper/square.cpp
 
 square.o: ../Minesweeper/square.cpp ../Minesweeper/square.hh \
 		../Minesweeper/gameboard.hh
