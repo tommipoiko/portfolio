@@ -1,0 +1,13 @@
+{
+  "name": "ade",
+  "studentNumber": "1337",
+  "start": "",
+  "goal": "",
+  "degreeProgrammeName": "Teknis-taloudellinen kandidaattiohjelma",
+  "language": "fi",
+  "completedCourses": [
+    "Tietointensiivinen palvelutoiminta TIJO.212 Credits: 5",
+    "Tietohallinto ja sen johtaminen TIJO.216 Credits: 5",
+    "Johdon laskentatoimi TUTA.212 Credits: 5"
+  ]
+}

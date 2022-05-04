@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: fi.tuni.prog3.sisu.AppTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 45.874 s <<< FAILURE! - in fi.tuni.prog3.sisu.AppTest
+testi{FxRobot}  Time elapsed: 6.392 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: Labeled has text "en"
+     but: was "fi"
+	at fi.tuni.prog3.sisu.AppTest.testi(AppTest.java:97)
+

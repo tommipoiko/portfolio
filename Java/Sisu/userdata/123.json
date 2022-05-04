@@ -1,0 +1,16 @@
+{
+  "name": "tom",
+  "studentNumber": "123",
+  "start": "",
+  "goal": "",
+  "degreeProgrammeName": "Teknis-taloudellinen kandidaattiohjelma",
+  "language": "fi",
+  "completedCourses": [
+    "Teollisuustalouden perusteet TUTA.010 Credits: 5",
+    "Supply Chain Management TUTA.254 Credits: 5",
+    "Ohjelmointi 1: Johdatus ohjelmointiin COMP.CS.100 Credits: 5",
+    "Organisaation oppiminen ja uudistuminen TIJO.210 Credits: 5",
+    "Tietojohtamisen kandidaatintyöseminaari TIJO.250 Credits: 0",
+    "Teknis-taloudellinen toimintaympäristö TEKTAL.010 Credits: 5"
+  ]
+}

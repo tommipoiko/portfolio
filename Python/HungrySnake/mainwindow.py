@@ -28,7 +28,7 @@ class MainWindow(QWidget):
         self.closeButton.clicked.connect(self.close)
 
     def initText(self):
-        self.text = QLabel("Hello World")
+        self.text = QLabel("Press the button")
         self.text.setAlignment(Qt.AlignCenter)
 
     def initLayout(self):

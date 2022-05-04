@@ -8,11 +8,8 @@ class MenuWindow(QWidget):
         QWidget.__init__(self)
 
         self.initMenu()
-        self.initMainWindow()
 
-        self.mainWindow.closed.connect(self.show)
-
-    # Initiating the separate components in the menu
+    # Initiating the separate components relevant to the menu
     def initMenu(self):
         self.startButton = QPushButton("Start playing")
         self.quitButton = QPushButton("Quit the game")
@@ -30,10 +27,11 @@ class MenuWindow(QWidget):
         self.mainWindow = MainWindow()
         self.mainWindow.resize(300, 400)
         self.mainWindow.show()
+        self.mainWindow.closed.connect(self.show)
 
     # Slots
     def startSlot(self):
-        self.mainWindow.show()
+        self.initMainWindow()
         self.hide()
 
     def closeSlot(self):
